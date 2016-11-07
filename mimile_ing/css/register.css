@@ -1,0 +1,52 @@
+*{  margin: 0;  padding: 0;  text-decoration:none;  list-style-type:none;color:#666;}
+body{font-size: 12px;}
+img{border:0;}
+input{outline:none;}
+/*广告条*/
+.banner{height:70px;width:100%;margin:0 auto;}
+.banner img{vertical-align: top;}
+/*logo*/
+header{height:130px;width:1000px;margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+.logo{margin:24px 27px 24px 0;}
+.logo img{float:left;}
+.logo h2{float:left;margin-top:24px;font-size: 20px;color:#666666;}
+.user{height:14px;width:100px;margin-top: 90px;}
+.user p{display: inline-block;}
+.user a{color:#00549d;}
+.user a:hover{text-decoration:underline;color:#f7994a;}
+/*注册框*/
+main{height:520px;width:998px;margin:0 auto;box-shadow: 5px 0 10px #f1f1f1,1px -3px 10px #f1f1f1  inset;}
+.main_top{height:40px;width:998px;border-bottom:1px solid #e7e7e7; margin-bottom: 7px;}
+.main_top h3{font-size: 22px;height:38px;width:172px;border-bottom:2px solid #e02423;color:#e02423;margin:auto;text-align: center;}
+.main_input{width:400px;height:470px;background: #f9f9f9;margin:0 auto;padding-top:20px;position: relative;}
+.main_input input{width:389px;height:40px;border:1px solid #e7e7e7;padding-left:9px;margin-bottom:28px;}
+.main_input .yanzheng{width:135px;height:44px;margin-right:20px;}
+.main_input img{width:90px;height:26px;position:absolute;top:170px;left:167px;}
+.main_input .tag{margin-left:100px;color:#00549d;font-size:16px;}
+.main_input .tag:hover{color:#e02423;text-decoration:underline;}
+.main_input .btn{width:147px;height:41px;border:1px solid #e7e7e7;}
+.main_input #zhuce{width:400px;height:40px;background: #e02323;color:#fff;text-align: center;font-size: 24px;line-height:40px;}
+.main_input #zhuce:hover{background: #c7171e;
+    cursor: pointer;}
+.main_input .table{width:25px;height:14px;border: 1px solid pink;margin-bottom:23px;}
+.main_input p{display: inline-block;height:16px;overflow:hidden;}
+.main_input p a{color:#c53801;}
+.main_input p a:hover{text-decoration: underline;}
+/*版权*/
+footer{width:1200px;height:111px;position:relative;background: #fff;margin:0 auto;text-align: center;position: relative;padding-top:50px; }
+footer a{margin-right:4px;padding-right:4px;border-right:1px solid #E7E7E7;}
+footer a:hover{text-decoration:underline;}
+footer p{margin:5px 0 15px 0;}
+span{position: absolute;top:50px; right:0;background: url("../icons/icon.gif") no-repeat scroll right -55px rgba(0,0,0,0);padding-right: 15px;}
+span:hover{text-decoration:underline;}
+
+
+
+
+
+
+
+
+

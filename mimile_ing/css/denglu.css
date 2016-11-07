@@ -1,0 +1,29 @@
+*{  margin: 0;  padding: 0;  text-decoration:none;  list-style-type:none;color:#666;}
+body{font-size: 12px;}
+img{border:0;}
+input{outline:none;}
+/*广告条*/
+.banner{height:70px;width:100%;margin:0 auto;}
+.banner img{vertical-align: top;}
+/*logo*/
+header{height:130px;width:1000px;margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+.logo{margin:24px 27px 24px 0;}
+.logo img{float:left;}
+.logo h2{float:left;margin-top:24px;font-size: 20px;color:#666666;}
+.user{height:14px;width:100px;margin-top: 90px;}
+.user p{display: inline-block;}
+.user a{color:#00549d;}
+.user a:hover{text-decoration:underline;color:#f7994a;}
+/*main*/
+main{}
+
+/*版权*/
+footer{width:1200px;height:111px;position:relative;background: #fff;margin:0 auto;text-align: center;position: relative;padding-top:50px; }
+footer a{margin-right:4px;padding-right:4px;border-right:1px solid #E7E7E7;}
+footer a:hover{text-decoration:underline;}
+footer p{margin:5px 0 15px 0;}
+span{position: absolute;top:50px; right:0;background: url("../icons/icon.gif") no-repeat scroll right -55px rgba(0,0,0,0);padding-right: 15px;}
+span:hover{text-decoration:underline;}
+

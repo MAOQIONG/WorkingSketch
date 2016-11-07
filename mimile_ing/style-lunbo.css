@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#view1 {
+    margin-left:21.1%;
+    width: 761px;
+    height: 403px;
+    position: relative;
+}
+#view1 img{width: 761px;height:403px;border: 0;}
+.preButton {
+    font-size: 40pt;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.nextButton {
+    font-size: 40pt;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
