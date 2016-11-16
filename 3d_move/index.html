@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #ocanvas{background:#a2a2a2;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;}
+</style>
+
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+<script>
+    var ocanvas = document.getElementById("canvas");
+    var mycanvas = ocanvas.getContext("2d");
+
+//    创建一个数组存放数据
+var arr=[];
+    setInterval(function(){
+        for(var i=0;i<arr.length;i++){
+            mycanvas.save();
+
+            mycanvas.beginPath();
+//            旋转到中心
+            mycanvas.translate(250,250);
+//         旋转角度
+            mycanvas.rotate(arr[i].num*Math.PI/180);
+//            缩放
+            mycanvas.scale(arr[i].num2,arr[i].num2);
+            mycanvas.fillStyle=arr[i].color;
+            mycanvas.fillRect(arr[i].num1,0,10,10);
+            mycanvas.closePath();
+            mycanvas.restore();
+            if(arr[i].num1<=0){
+                arr.splice(i,1);
+            }else{
+            //            循环一次改变一次
+            arr[i].num++;
+            arr[i].num2 -= 0.001;
+            arr[i].num1-=0.4;
+            }
+
+        }
+    },10);
+
+//    储存数据
+    setInterval(function(){
+        var obj={
+            "num":0,
+            "num1":240,//水平距离
+            "num2":1,//scale数字
+            "color":"rgb("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+")"
+        }
+        arr.push(obj);
+    },10)
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C3实现轮播图</title>
+</head>
+<style>
+    *{margin:0;padding:0;}
+    #outer{position: relative;overflow: hidden;width:390px;height:220px;border:  3px solid #389AE3;}
+    img{ width: 390px;height:220px;  }
+    ul{width: 2440px;height:220px; position: absolute;left:0;}
+    li{width:390px;height:220px;float:left;}
+    #btn {position: absolute;top: 190px;left:25%;}
+    #btn li{ width:20px;height:20px;line-height: 20px;margin-right:20px;border-radius:50%;background:#005EA6;text-align: center;
+    list-style:none;}
+    p{position: absolute;top:100px;width:30px;height:50px;background: rgba(0,0,0,.5);text-align: center;}
+    #btn_left{left:20px;}
+    #btn_right{right:20px;}
+</style>
+<body>
+    <div id="outer">
+        <ul style="transition :all 1s linear">
+            <li><img src="imgs/a1.jpg"/></li>
+            <li><img src="imgs/a2.jpg"/></li>
+            <li><img src="imgs/a3.jpg"/></li>
+            <li><img src="imgs/a4.jpg"/></li>
+            <li><img src="imgs/a5.jpg"/></li>
+            <li><img src="imgs/a1.jpg"/></li>
+        </ul>
+        <ul id="btn">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <p id="btn_left">&lt</p>
+        <p id="btn_right">&gt</p>
+    </div>
+
+</body>
+<script>
+    var outer=document.getElementById("outer");
+    var oUl=document.getElementsByTagName("ul")[0];
+    var btn_s=document.getElementById("btn").getElementsByTagName("li");
+    var changePage=document.getElementsByTagName("p");
+    banner(outer,oUl,btn_s,changePage,2000,390);
+    function banner(outer,oUl,btn_s,changePage,duration,banWid){
+        var maxPage=btn_s.length;
+        var page=0;
+        var timer;
+        var timer1;
+            function move(){
+                if(page>maxPage){
+                    oUl.style.transition="";
+                    btn_s[0].style.left="0px";
+                    page=0;
+                    timer1=setTimeout(function(){
+                        oUl.style.transition="all 1s linear";
+                    },10)
+                }
+                    oUl.style.left=page*(-banWid)+"px";
+                    page++;
+        }
+        timer=setInterval(move,duration);
+        for(var i=0;i<btn_s.length;i++){
+            btn_s[i].index=i;
+            btn_s[i].onmouseover=function(){
+                page = this.index;
+                oUl.style.left=page*(-banWid)+"px";
+            }
+        }
+        outer.onmouseover=function() {
+            clearInterval(timer);
+            clearTimeout(timer1);
+            changePage[0].style.display="block";
+            changePage[1].style.display="block";
+        }
+        outer.onmouseout=function(){
+            timer=setInterval(move,duration);
+            changePage[0].style.display="none";
+            changePage[1].style.display="none";
+        }
+    }
+</script>
+</html>

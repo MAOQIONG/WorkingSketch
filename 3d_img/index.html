@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d-图片划出</title>
+</head>
+<style>
+    #center_3{transform: perspective(1000px) rotateX(70deg) rotateZ(0deg)rotateY(0deg);
+        transform-style:preserve-3d;margin:100px;width:390px;height:220px;}
+    #center_3 img{width:390px;height:220px;}
+    #center_3 span{width:390px;height:220px;position:absolute;backface-visibility:hidden;transition: all 2s;}
+    #center_3 span:nth-child(1){transform:translateZ(90px);}
+    #center_3 span:nth-child(2){transform:translateZ(60px);}
+    #center_3 span:nth-child(3){transform:translateZ(30px);}
+    #center_3 span:nth-child(4){transform:translateZ(0px);}
+    #center_3 span:nth-child(5){transform:translateZ(-30px);}
+    #center_3 span:nth-child(6){transform:translateZ(-60px)}
+</style>
+<body>
+<div id="center_3">
+    <span><img src="imgs/a1.jpg" /></span>
+    <span><img src="imgs/a2.jpg" /></span>
+    <span><img src="imgs/a3.jpg" /></span>
+    <span><img src="imgs/a4.jpg" /></span>
+    <span><img src="imgs/a5.jpg" /></span>
+</div>
+</body>
+<script>
+    var oSpan=document.getElementsByTagName("span");
+    for(var i=0;i<oSpan.length;i++){
+        oSpan[i].onclick=function(){
+            if(this.style.transform == ""){
+                for(var j=0;j<oSpan.length;j++){
+                    oSpan[j].style.transform="";
+                }
+                this.style.transform = "rotateX(-70deg) translateX(600px) scale(1.2)"
+            }
+        }
+    }
+</script>
+</html>
