@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册表单</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<style>
+    #box{
+        margin:0 auto;
+        width:600px;
+        height:700px;
+        border:1px solid #e7e7e7;
+        padding:50px
+    }
+    form{
+        width:500px;
+    }
+
+</style>
+<body>
+<div id="box">
+
+
+<!--姓名、性别、年龄、密码、同意协议，确定、关闭按钮-->
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">姓名：</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" placeholder="请输入姓名"><br>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">性别：</label>
+        <div class="col-sm-10">
+            <input type="radio" value="男" name="sex" >男
+            <input type="radio" value="女" name="sex" >女<br>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">年龄：</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" placeholder="请输入年龄"><br>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">密码：</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="password" placeholder="请输入密码"><br>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">邮箱：</label>
+        <div class="col-sm-10">
+            <input class="form-control" type="email" placeholder="请输入邮箱"><br>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-10">
+            <input type="checkbox" value="remember-me">同意协议
+        </div><br>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2" style="margin-bottom:20px;">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">取消</button>
+            </div>
+        </div>
+
+</form>
+</div>
+<div>
+
+</div>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
