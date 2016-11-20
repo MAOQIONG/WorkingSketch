@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            list-style: none;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #3cffe9;
+            margin: 5px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: #ff695f;
+            margin: 5px;
+        }
+        .ul{
+            display: none;
+            position: absolute;
+        }
+        .ul li a{
+            width: 200px;
+            height: 30px;
+            display: inline-block;
+            background: #09c9ff;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            color: #f1f1f1;
+            border: 1px solid #9ab7ff;
+            border-radius:2px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<ul id="ul" class="ul">
+    <li><a href="https://www.baidu.com/">百度</a></li>
+    <li><a href="http://news.baidu.com/">百度新闻</a></li>
+    <li><a href="http://music.baidu.com/">百度音乐</a></li>
+</ul>
+<div id="div2"></div>
+<ul id="ul2" class="ul">
+    <li><a href="http://hz.meituan.com/">美团</a></li>
+    <li><a href="https://www.ele.me/">饿了么</a></li>
+    <li><a href="https://hz.nuomi.com/?lf=2">百度糯米</a></li>
+</ul>
+</body>
+<script>
+    var div1=document.querySelector("#div1");
+    var div2=document.querySelector("#ul");
+    var div4=document.querySelector("#ul2");
+    var div3=document.querySelector("#div2");
+
+    function control(div1,div2,ul){
+
+        div1.addEventListener("contextmenu",function(ev){
+            ev.preventDefault();
+            div2.style.display="block";
+            div2.style.left=ev.clientX+"px";
+            div2.style.top=ev.clientY+"px";
+            if(ul.style.display==="block"){
+                ul.style.display="none"
+            }
+        });
+        document.addEventListener("click",function(){
+            div2.style.display="none";
+        });
+//        document.addEventListener("contextmenu",function(){
+//            div2.style.display="none";
+//        });
+
+    }
+    control(div1,div2 ,div4);
+    control(div3,div4 ,div2);
+
+</script>
+</html>
